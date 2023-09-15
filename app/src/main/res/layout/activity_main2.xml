@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity2">
+
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Your Password?"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/a"
+        android:layout_margin="12dp" />
+
+    <EditText
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter email"
+        android:padding="12dp"
+        android:layout_below="@id/b"
+        android:layout_margin="10dp"
+        android:background="#34989C9C"
+        android:textColorHint="#8B8B8B" />
+
+    <Button
+        android:id="@+id/d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/c"
+        android:text="Reset Password"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF5722"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textColor="#5B5B5B"
+        android:backgroundTint="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:textSize="20dp" />
+
+</RelativeLayout>

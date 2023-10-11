@@ -61,12 +61,12 @@ public class MainActivity5 extends AppCompatActivity {
     }
 
     private void Activity5() {
-        Intent intent = new Intent(this, MainActivity10.class);
+        Intent intent = new Intent(this, MainActivity8.class);
         startActivity(intent);
     }
 
     private void Activity4() {
-        Intent intent = new Intent(this, MainActivity8.class);
+        Intent intent = new Intent(this, MainActivity10.class);
         startActivity(intent);
     }
 

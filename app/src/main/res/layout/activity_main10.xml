@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
+        <ImageView
             android:id="@+id/v1"
             android:layout_width="match_parent"
             android:layout_height="120dp"

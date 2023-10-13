@@ -82,6 +82,9 @@ public class MainActivity3 extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Toast.makeText(MainActivity3.this, "Authentication created.",
                                             Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                     } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(MainActivity3.this, "Authentication failed.",

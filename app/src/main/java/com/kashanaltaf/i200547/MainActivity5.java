@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity5 extends AppCompatActivity {
 
     ImageView l1;
@@ -16,6 +19,9 @@ public class MainActivity5 extends AppCompatActivity {
     ImageView l3;
     ImageView l4;
     ImageView l5;
+    Button b1;
+    FirebaseAuth auth;
+    FirebaseUser user;
 
 
     @Override
@@ -27,6 +33,26 @@ public class MainActivity5 extends AppCompatActivity {
         l3 = (ImageView) findViewById(R.id.l3);
         l4 = (ImageView) findViewById(R.id.l4);
         l5 = (ImageView) findViewById(R.id.l5);
+        b1 = (Button) findViewById(R.id.but11);
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
+        if(user == null){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         l1.setOnClickListener(new View.OnClickListener() {
             @Override

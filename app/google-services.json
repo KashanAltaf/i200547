@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "895478752268",
+    "project_id": "i200547i202433smd",
+    "storage_bucket": "i200547i202433smd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895478752268:android:939e3446ceeb514e6cba29",
+        "android_client_info": {
+          "package_name": "com.kashanaltaf.i200547"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBzgwME3sEPrXv65ohFywtIcIJe5EgC6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

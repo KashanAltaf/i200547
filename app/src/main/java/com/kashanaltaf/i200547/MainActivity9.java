@@ -1,12 +1,21 @@
 package com.kashanaltaf.i200547;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
 
 public class MainActivity9 extends AppCompatActivity {
 
@@ -21,6 +30,7 @@ public class MainActivity9 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main9);
+
         l1 = (ImageButton) findViewById(R.id.image);
         l2 = (ImageButton) findViewById(R.id.call);
         l3 = (ImageButton) findViewById(R.id.video);
@@ -95,4 +105,5 @@ public class MainActivity9 extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity8.class);
         startActivity(intent);
     }
+
 }

@@ -17,8 +17,12 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -29,6 +33,7 @@ import java.io.File;
 import java.util.UUID;
 
 public class MainActivity10 extends AppCompatActivity {
+    FirebaseDatabase db;
 
     ImageView l1;
     ImageView l2;
@@ -50,6 +55,7 @@ public class MainActivity10 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main10);
+        db = FirebaseDatabase.getInstance();
 
 
         l1 = (ImageView) findViewById(R.id.lr1);
@@ -102,6 +108,28 @@ public class MainActivity10 extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent, 1);
             }
+        });
+        manageConnections();
+    }
+
+    protected void manageConnections(){
+        final DatabaseReference connectionReference= db.getReference().child("connections");
+        final DatabaseReference lastConnected = db.getReference().child("lastConnected");
+        final DatabaseReference infoConnected = db.getReference(".info/connected");
+
+        infoConnected.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                boolean connected = snapshot.getValue(Boolean.class);
+                if(connected){
+                    DatabaseReference con = connectionReference.child("123");
+                    con.setValue(ServerValue.TIMESTAMP);
+                    con.onDisconnect().setValue(false);
+                    lastConnected.onDisconnect().setValue(ServerValue.TIMESTAMP);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}
         });
     }
 

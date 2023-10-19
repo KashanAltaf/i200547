@@ -62,13 +62,16 @@
         <View
             android:layout_width="240dp"
             android:layout_height="120dp"
-            android:background="#C1C1C1" />
+            android:background="#C1C1C1"
+            android:id="@+id/v1"/>
 
         <View
             android:layout_width="240dp"
             android:layout_height="60dp"
             android:layout_marginTop="120dp"
-           />
+            android:clickable="true"
+            android:id="@+id/t1"
+            android:contentDescription="Item 1"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -203,7 +206,8 @@
             android:layout_width="240dp"
             android:layout_height="60dp"
             android:layout_marginTop="120dp"
-            />
+            android:id="@+id/t2"
+            android:contentDescription="Item 2" />
 
         <TextView
             android:layout_width="wrap_content"

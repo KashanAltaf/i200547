@@ -22,6 +22,7 @@ public class MainActivity5 extends AppCompatActivity {
     Button b1;
     FirebaseAuth auth;
     FirebaseUser user;
+    View v1, v2;
 
 
     @Override
@@ -34,6 +35,8 @@ public class MainActivity5 extends AppCompatActivity {
         l4 = (ImageView) findViewById(R.id.l4);
         l5 = (ImageView) findViewById(R.id.l5);
         b1 = (Button) findViewById(R.id.but11);
+        v1 = (View) findViewById(R.id.t1);
+        v2 = (View) findViewById(R.id.t2);
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -84,6 +87,29 @@ public class MainActivity5 extends AppCompatActivity {
                 Activity5();
             }
         });
+
+        v1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Activity6();
+            }
+        });
+
+
+        v2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Activity7();
+            }
+        });
+    }
+    private void Activity7(){
+        Intent intent = new Intent(this, MainActivity11.class);
+        startActivity(intent);
+    }
+    private void Activity6(){
+        Intent intent = new Intent(this, MainActivity11.class);
+        startActivity(intent);
     }
 
     private void Activity5() {

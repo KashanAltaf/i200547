@@ -39,6 +39,7 @@
 
 
         <Button
+            android:id="@+id/report"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Report"
@@ -237,6 +238,7 @@ tortor, eu gravida orci efficitur eget."
             android:background="@color/white">
 
             <ImageButton
+                android:id="@+id/chat"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="100dp"
@@ -271,6 +273,7 @@ tortor, eu gravida orci efficitur eget."
         android:layout_alignParentBottom="true">
 
         <Button
+            android:id="@+id/rent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rent It"

@@ -124,11 +124,14 @@
             android:id="@+id/r2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter item name"
             android:layout_below="@id/r1"
-            android:padding="15dp"
-            android:layout_margin="7dp"
-            android:background="#34989C9C" />
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#34989C9C"
+            android:hint="Enter item name"
+            android:padding="15dp" />
 
         <TextView
             android:id="@+id/r3"
@@ -144,11 +147,14 @@
             android:id="@+id/r4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter hourly rate"
             android:layout_below="@id/r3"
-            android:padding="15dp"
-            android:layout_margin="7dp"
-            android:background="#34989C9C" />
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#34989C9C"
+            android:hint="Enter hourly rate"
+            android:padding="15dp" />
 
         <TextView
             android:id="@+id/r5"
@@ -165,14 +171,17 @@
             android:id="@+id/r6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter description"
-            android:paddingBottom="50dp"
             android:layout_below="@id/r5"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#34989C9C"
+            android:hint="Enter description"
             android:paddingLeft="15dp"
-            android:paddingRight="15dp"
             android:paddingTop="15dp"
-            android:layout_margin="5dp"
-            android:background="#34989C9C" />
+            android:paddingRight="15dp"
+            android:paddingBottom="50dp" />
 
         <TextView
             android:id="@+id/r7"
@@ -189,22 +198,29 @@
             android:id="@+id/r8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Islamabad"
             android:layout_below="@id/r7"
-            android:padding="10dp"
-            android:layout_margin="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#34989C9C"
             android:drawableRight="@drawable/baseline_expand_more_24"
-            android:background="#34989C9C" />
+            android:padding="10dp"
+            android:text="Islamabad" />
 
     </RelativeLayout>
 
     <Button
+        android:id="@+id/b1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Post Item"
-        android:textSize="30dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="15dp"
-        android:backgroundTint="#FF5722" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FF5722"
+        android:text="Post Item"
+        android:textSize="30dp" />
 
 </RelativeLayout>

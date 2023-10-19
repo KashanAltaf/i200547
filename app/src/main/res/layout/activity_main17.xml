@@ -92,6 +92,7 @@
             android:contentDescription="Camera Change"/>
 
         <ImageButton
+            android:id="@+id/endVid"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_width="10dp"

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ public class MainActivity9 extends AppCompatActivity {
     ImageButton l4;
     ImageButton l5;
     ImageButton l6;
+    EditText r1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity9 extends AppCompatActivity {
         l4 = (ImageButton) findViewById(R.id.cam);
         l5 = (ImageButton) findViewById(R.id.phot);
         l6 = (ImageButton) findViewById(R.id.file);
+        r1 = (EditText) findViewById(R.id.reply);
 
         l1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +77,8 @@ public class MainActivity9 extends AppCompatActivity {
                 Activity6();
             }
         });
+
+
     }
 
     private void Activity6() {

@@ -18,6 +18,7 @@
         android:background="@color/white">
 
         <ImageButton
+            android:id="@+id/e0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -69,11 +70,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/e1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="#D0D0D0"
-        android:layout_margin="10dp"
-        android:padding="40dp"
         android:hint="Enter reason here"
-        android:textColorHint="#858585"/>
+        android:padding="40dp"
+        android:textColorHint="#858585" />
 
     <Button
         android:id="@+id/e3"
@@ -81,9 +85,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"
-        android:text="Submit Report"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:backgroundTint="#FF5722"
+        android:text="Submit Report"
         android:textSize="30dp" />
 
 

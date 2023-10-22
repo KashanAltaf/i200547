@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/e1"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#D0D0D0"

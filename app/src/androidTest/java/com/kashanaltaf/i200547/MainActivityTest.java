@@ -20,8 +20,8 @@ public class MainActivityTest {
     @Test
     public void testLoginSuccess() {
         // Input valid username and password
-        Espresso.onView(ViewMatchers.withId(R.id.e1)).perform(ViewActions.typeText("your_username"));
-        Espresso.onView(ViewMatchers.withId(R.id.e2)).perform(ViewActions.typeText("your_password"));
+        Espresso.onView(ViewMatchers.withId(R.id.f)).perform(ViewActions.typeText("your_username"));
+        Espresso.onView(ViewMatchers.withId(R.id.sx)).perform(ViewActions.typeText("your_password"));
 
         // Close the soft keyboard
         Espresso.closeSoftKeyboard();

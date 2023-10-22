@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity4 extends AppCompatActivity {
 
     ImageButton i1;
@@ -18,6 +21,13 @@ public class MainActivity4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
         i1 = (ImageButton) findViewById(R.id.image);
+
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
+
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

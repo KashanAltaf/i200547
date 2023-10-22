@@ -52,6 +52,11 @@ public class MainActivity15 extends AppCompatActivity {
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
+
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

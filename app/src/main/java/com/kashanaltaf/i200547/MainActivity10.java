@@ -65,6 +65,12 @@ public class MainActivity10 extends AppCompatActivity {
         l5 = (ImageView) findViewById(R.id.lr5);
         l6 = (ImageView) findViewById(R.id.v1);
 
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
+
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 

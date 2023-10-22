@@ -19,6 +19,8 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -41,6 +43,12 @@ public class MainActivity3 extends AppCompatActivity {
         e4 = (EditText) findViewById(R.id.txtCtry);
         e5 = (EditText) findViewById(R.id.txtCty);
         progressBar = (ProgressBar) findViewById(R.id.progress);
+
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

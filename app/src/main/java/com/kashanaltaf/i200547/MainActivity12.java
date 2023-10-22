@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -49,6 +51,12 @@ public class MainActivity12 extends AppCompatActivity {
         e3 = (EditText) findViewById(R.id.r6);
         e4 = (EditText) findViewById(R.id.r8);
         b1 = (Button) findViewById(R.id.b1);
+
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
 
     }
     @Override

@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -30,6 +32,12 @@ public class MainActivity2 extends AppCompatActivity {
         b2 = (Button) findViewById(R.id.d);
         b3 = (Button) findViewById(R.id.e);
         e1 = (EditText) findViewById(R.id.c);
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
+
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

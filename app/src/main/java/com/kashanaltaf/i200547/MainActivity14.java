@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity14 extends AppCompatActivity {
@@ -29,6 +30,12 @@ public class MainActivity14 extends AppCompatActivity {
         e1 = (EditText) findViewById(R.id.e2);
         b1 = (Button) findViewById(R.id.e3);
         b2 = (ImageButton) findViewById(R.id.e0);
+
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
 
         com.firebase.client.Firebase.setAndroidContext(this);
         firebase = new com.firebase.client.Firebase("https://console.firebase.google.com/project/i200547i202433smd/database/i200547i202433smd-default-rtdb/data/~2F");

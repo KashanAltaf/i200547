@@ -34,6 +34,12 @@ public class MainActivity13 extends AppCompatActivity {
         e5 = findViewById(R.id.r10);
         b1 = findViewById(R.id.but100);
 
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
+
         reference = FirebaseDatabase.getInstance().getReference("users");
 
         showData();

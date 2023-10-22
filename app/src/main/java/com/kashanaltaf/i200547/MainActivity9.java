@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -40,6 +42,12 @@ public class MainActivity9 extends AppCompatActivity {
         l5 = (ImageButton) findViewById(R.id.phot);
         l6 = (ImageButton) findViewById(R.id.file);
         r1 = (EditText) findViewById(R.id.reply);
+
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("users");
+        database.keepSynced(true);
 
         l1.setOnClickListener(new View.OnClickListener() {
             @Override

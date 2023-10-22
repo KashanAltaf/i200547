@@ -11,12 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.firebase.client.Firebase;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
 
 public class MainActivity14 extends AppCompatActivity {
 
-    FirebaseDatabase firebase;
+    com.firebase.client.Firebase firebase;
     EditText e1;
     Button b1;
     ImageButton b2;
@@ -29,14 +29,26 @@ public class MainActivity14 extends AppCompatActivity {
         e1 = (EditText) findViewById(R.id.e2);
         b1 = (Button) findViewById(R.id.e3);
         b2 = (ImageButton) findViewById(R.id.e0);
-        
+
+        com.firebase.client.Firebase.setAndroidContext(this);
+        firebase = new com.firebase.client.Firebase("https://console.firebase.google.com/project/i200547i202433smd/database/i200547i202433smd-default-rtdb/data/~2F");
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String feedback = e1.getText().toString();
+                Firebase feedbackFire = firebase.child("Feedback");
+                feedbackFire.setValue(feedback);
+
+                if(feedback.isEmpty()){
+                    e1.setError("Please Fill the Form");
+                    b1.setEnabled(false);
+                }
+                else{
+                    e1.setError(null);
+                    b1.setEnabled(true);
+                }
             }
         });
-
-        }
+    }
 }

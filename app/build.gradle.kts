@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kashanaltaf.i200547"
+    namespace = "com.ass2.i200547_i202433"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.kashanaltaf.i200547"
+        applicationId = "com.ass2.i200547_i202433"
         minSdk = 26
         targetSdk = 33
         versionCode = 1

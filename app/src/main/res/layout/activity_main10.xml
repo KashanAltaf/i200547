@@ -22,7 +22,7 @@
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
+            android:layout_weight="0.8"
             android:text="Profile"
             android:textStyle="bold"
             android:textSize="30dp"
@@ -30,6 +30,16 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"/>
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:id="@+id/editProf"
+            android:src="@drawable/edit_text_svgrepo_com"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Edit profile button"/>
 
     </LinearLayout>
 

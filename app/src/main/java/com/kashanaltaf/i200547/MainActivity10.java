@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -34,6 +35,8 @@ import java.util.UUID;
 
 public class MainActivity10 extends AppCompatActivity {
     FirebaseDatabase db;
+
+    ImageButton i1;
 
     ImageView l1;
     ImageView l2;
@@ -64,6 +67,7 @@ public class MainActivity10 extends AppCompatActivity {
         l4 = (ImageView) findViewById(R.id.lr4);
         l5 = (ImageView) findViewById(R.id.lr5);
         l6 = (ImageView) findViewById(R.id.v1);
+        i1 = (ImageButton) findViewById(R.id.editProf);
 
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
@@ -116,6 +120,14 @@ public class MainActivity10 extends AppCompatActivity {
             }
         });
         manageConnections();
+
+        i1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity10.this, MainActivity13.class);
+                startActivity(intent);
+            }
+        });
     }
 
     protected void manageConnections(){

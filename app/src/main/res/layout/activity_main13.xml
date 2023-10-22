@@ -42,6 +42,7 @@
             android:layout_marginLeft="10dp"/>
 
         <Button
+            android:id="@+id/but100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save Changes"
@@ -85,11 +86,14 @@
         android:id="@+id/r2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Daud"
         android:layout_below="@id/r1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#34989C9C"
         android:padding="15dp"
-        android:layout_margin="10dp"
-        android:background="#34989C9C" />
+        android:hint="Enter name" />
 
     <TextView
         android:id="@+id/r3"
@@ -106,11 +110,14 @@
         android:id="@+id/r4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="daud@gmail.com"
         android:layout_below="@id/r3"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#34989C9C"
         android:padding="15dp"
-        android:layout_margin="10dp"
-        android:background="#34989C9C" />
+        android:hint="Enter Email" />
 
     <TextView
         android:id="@+id/r5"
@@ -124,15 +131,19 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp" />
 
+
     <EditText
         android:id="@+id/r6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0123 4567890"
         android:layout_below="@id/r5"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#34989C9C"
         android:padding="15dp"
-        android:layout_margin="10dp"
-        android:background="#34989C9C" />
+        android:hint="Enter contact number" />
 
     <TextView
         android:id="@+id/r7"
@@ -150,11 +161,14 @@
         android:id="@+id/r8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pakistan"
         android:layout_below="@id/r7"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#34989C9C"
         android:padding="12dp"
-        android:layout_margin="10dp"
-        android:background="#34989C9C" />
+        android:hint="Enter country" />
 
     <TextView
         android:id="@+id/r9"
@@ -172,10 +186,13 @@
         android:id="@+id/r10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Islamabad"
         android:layout_below="@id/r9"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#34989C9C"
         android:padding="15dp"
-        android:layout_margin="10dp"
-        android:background="#34989C9C" />
+        android:hint="Enter city" />
 
 </RelativeLayout>
